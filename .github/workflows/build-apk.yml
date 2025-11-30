@@ -29,7 +29,13 @@ jobs:
             libgles2-mesa-dev \
             libssl-dev \
             libffi-dev \
-            libsqlite3-dev
+            libsqlite3-dev \
+            autoconf \
+            automake \
+            libtool \
+            libtool-bin \
+            pkg-config \
+            build-essential
 
       - name: Install python-for-android and Kivy
         run: |
