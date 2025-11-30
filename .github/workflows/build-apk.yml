@@ -36,7 +36,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install "kivy[base]==2.3.0" cython==0.29.36 python-for-android
 
-      - name: Build APK
+      - name: Build APK with python-for-android
         run: |
           mkdir -p dist
           p4a apk \
@@ -46,8 +46,7 @@ jobs:
             --version=0.1 \
             --bootstrap=sdl2 \
             --requirements=python3,kivy \
-            --dist_name=kivy_calc_dist \
-            --android-api=31 \
+            --android-api=30 \
             --ndk-api=21 \
             --arch=armeabi-v7a \
             --output-file=dist/kivy_calc.apk
